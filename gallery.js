@@ -5,7 +5,7 @@ function supports_history_api() {
       alert("No soporta History con HTML5");
   } 
 }
-//"http://miansaay.github.io/X-Nav-5.7.18-HistoryAPI/" +
+//"http://miansaay.github.io/X-Nav-5.7.18-HistoryAPI/gallery/"
 function swapPhoto(href) {
   var req = new XMLHttpRequest();
   req.open("GET",
