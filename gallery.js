@@ -1,11 +1,15 @@
 function supports_history_api() {
-  return !!(window.history && history.pushState);
+  if (Modernizr.history) {
+      return !!(window.history && history.pushState);
+   } else {
+      alert("No soporta History con HTML5");
+  } 
 }
 
 function swapPhoto(href) {
   var req = new XMLHttpRequest();
   req.open("GET",
-           "http://gsyc.es/~grex/history_api/gallery/" +
+           "http://localhost:4000/gallery/" +
              href.split("/").pop(),
            false);
   req.send(null);
